@@ -21,4 +21,4 @@ jobs:
       with:
         dotnet-version: 2.0.*
     - name: Build
-      run: dotnet restore OrleansCrossPlatform.sln
+      run: dotnet restore OrleansCrossPlatform.sln --verbosity normal
