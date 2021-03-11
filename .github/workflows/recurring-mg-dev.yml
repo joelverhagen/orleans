@@ -1,0 +1,24 @@
+name: api-mg.dev.nugettest.org
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11,31,51 * * * *'
+
+jobs:
+  build_test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    name: Build & Test
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        ref: jver-mg
+    - name: Setup .NET Core 2.0 on ${{ matrix.os }}
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.0.*
+    - name: Build
+      run: dotnet restore OrleansCrossPlatform.sln
