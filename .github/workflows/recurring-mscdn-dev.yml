@@ -1,4 +1,4 @@
-name: Round 2 - api-mg.dev.nugettest.org
+name: Round 2 - api-mscdn.dev.nugettest.org
 on:
   workflow_dispatch:
   schedule:
@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
       with:
-        ref: jver-mg
+        ref: jver-mscdn
     - name: Setup .NET Core 2.1 on ${{ matrix.os }}
       uses: actions/setup-dotnet@v1
       with:
