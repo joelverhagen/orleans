@@ -1,4 +1,4 @@
-name: Round 2 - apidev.nugettest.org
+name: apidev.nugettest.org
 on:
   workflow_dispatch:
   schedule:
