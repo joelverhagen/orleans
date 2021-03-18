@@ -1,8 +1,8 @@
 name: Round 2 - api-mscdn.dev.nugettest.org
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '11,31,51 * * * *'
+#  schedule:
+#    - cron: '11,31,51 * * * *'
 
 jobs:
   build_test:
